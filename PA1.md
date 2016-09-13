@@ -50,7 +50,7 @@ dsteps <- aggregate(steps ~ date, data = newdata, sum)
 hist(as.numeric(dsteps$steps), breaks = 25, col = "blue", xlab = "Daily Steps", main = "Total steps taken each day")
 ```
 
-![Total Steps Histogram](C:\Users\Vadim Katsemba\Pictures\Total Steps Histogram.png?raw=TRUE) 
+![](https://github.com/vkatsemba/RepData_PeerAssessment1/blob/master/Total%20Steps%20Histogram.png?raw=TRUE) 
 
 ```r
 mean(dsteps$steps)
@@ -78,7 +78,7 @@ int <- tapply(activity$steps, activity$interval, mean, na.rm=T)
 plot(int ~ unique(activity$interval), type = "l", xlab = "Interval", ylab = "Average Number of Steps", main = "Average Daily Activity Pattern")
 ```
 
-![Average Activity Time Plot](C:\Users\Vadim Katsemba\Pictures\Average Activity Time Plot.png?raw=true) 
+![](https://github.com/vkatsemba/RepData_PeerAssessment1/blob/master/Average%20Activity%20Time%20Plot.png?raw=true) 
 
 ##Maximum number of steps
 
@@ -131,7 +131,7 @@ colnames(fullsteps) <- c("date","steps")
 hist(as.numeric(fullsteps$steps), breaks = 25, col = "green", xlab = "# of Steps", main = "Total Number of Steps Taken Each Day")
 ```
 
-![Total Steps Taken Each Day Histogram](C:\Users\Vadim Katsemba\Pictures\Total Steps Taken Each Day Histogram.png?raw=true) 
+![](https://github.com/vkatsemba/RepData_PeerAssessment1/blob/master/Total%20Steps%20Taken%20Each%20Day%20Histogram.png?raw=true) 
 
 ##Mean and median of the total number of steps
 
@@ -218,5 +218,5 @@ library(lattice)
 xyplot(avsteps ~ interval | daytype, data = dtintsteps, type = "l", layout = c(1,2))
 ```
 
-![Weekend Weekday Time Plots](C:\Users\Vadim Katsemba\Pictures\Weekend Weekday Time Plots.png?raw=true) 
+![](https://github.com/vkatsemba/RepData_PeerAssessment1/blob/master/Weekend%20Weekday%20Time%20Plots.png?raw=true) 
 
