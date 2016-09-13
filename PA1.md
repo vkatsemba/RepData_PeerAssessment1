@@ -50,7 +50,7 @@ dsteps <- aggregate(steps ~ date, data = newdata, sum)
 hist(as.numeric(dsteps$steps), breaks = 25, col = "blue", xlab = "Daily Steps", main = "Total steps taken each day")
 ```
 
-![](PA1_files/figure-html/unnamed-chunk-4-1.png) 
+![](PA1_files/figure-html/unnamed-chunk-4-1.png?raw=true) 
 
 ```r
 mean(dsteps$steps)
@@ -78,7 +78,7 @@ int <- tapply(activity$steps, activity$interval, mean, na.rm=T)
 plot(int ~ unique(activity$interval), type = "l", xlab = "Interval", ylab = "Average Number of Steps", main = "Average Daily Activity Pattern")
 ```
 
-![](PA1_files/figure-html/unnamed-chunk-5-1.png) 
+![](PA1_files/figure-html/unnamed-chunk-5-1.png?raw=true) 
 
 ##Maximum number of steps
 
@@ -131,7 +131,7 @@ colnames(fullsteps) <- c("date","steps")
 hist(as.numeric(fullsteps$steps), breaks = 25, col = "green", xlab = "# of Steps", main = "Total Number of Steps Taken Each Day")
 ```
 
-![](PA1_files/figure-html/unnamed-chunk-9-1.png) 
+![](PA1_files/figure-html/unnamed-chunk-9-1.png?raw=true) 
 
 ##Mean and median of the total number of steps
 
@@ -218,5 +218,5 @@ library(lattice)
 xyplot(avsteps ~ interval | daytype, data = dtintsteps, type = "l", layout = c(1,2))
 ```
 
-![](PA1_files/figure-html/unnamed-chunk-13-1.png) 
+![](PA1_files/figure-html/unnamed-chunk-13-1.png?raw=true) 
 
